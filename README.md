@@ -10,11 +10,12 @@ To run this VirusTotal API script, perform the following:
     
 
 Below are the arguements that need to be passed to the script:
+
     input = the input filename that contains the MD5, SHA1, or SHA256 hashes
     output = the CSV filename that the results will be written to
     api_key = you guessed it
-
-
+    
+    
 After the script completes, a CSV file will be written to the current working directory with the results of the API call.
 
 This specific VirusTotal API is documented here: 
