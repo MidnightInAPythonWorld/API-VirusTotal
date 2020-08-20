@@ -21,17 +21,6 @@ except:
     exit()
 
 
-### Import VirusTotal hashes
-def hash_data_import(input_hash_csv_filename):
-    data= []
-    with open(input_hash_csv_filename, 'r') as fh:
-        fhReader = csv.reader(fh, delimiter=',')
-        for row in fhReader:
-            hash = row[0]
-            data.append(hash)
-    return data
-
-
 ### Below header is used for making the request look like a normal browswer.  
 normal_headers = {}
 normal_headers['Accept'] = 'application/json'
@@ -41,7 +30,15 @@ normal_headers['Accept-Encoding'] = 'gzip, deflate'
 normal_headers['Connection'] = 'Keep-Alive'
 
 
-### VirusTotal API is documented here: https://developers.virustotal.com/reference#file-report
+### Import VirusTotal hashes
+def hash_data_import(input_hash_csv_filename):
+    data= []
+    with open(input_hash_csv_filename, 'r') as fh:
+        fhReader = csv.reader(fh, delimiter=',')
+        for row in fhReader:
+            hash = row[0]
+            data.append(hash)
+    return data
 
 
 ### Hash Checker to validate characters and length
