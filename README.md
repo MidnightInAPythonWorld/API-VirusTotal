@@ -18,9 +18,9 @@ The script has a time delay in between requests so daily limits don't get exceed
 
 VirusTotal is limiting based on the following rates:
 
-    Request rate 4 requests/minute
-    Daily quota 1000 requests/day
-    Monthly quota 30000 requests/month 
+    Request rate: 4 requests/minute
+    Daily quota: 1000 requests/day
+    Monthly quota: 30000 requests/month 
 
 
 After the script completes, a CSV file will be written to the current working directory with the results of the API call.
