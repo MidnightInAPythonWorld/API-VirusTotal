@@ -33,8 +33,6 @@ def hash_data_import(input_hash_csv_filename):
 
 
 ### Below header is used for making the request look like a normal browswer.  
-### This is required to make the requests look like normal web traffic.
-### This could be required to pass proxy filtering that might be occurring on network.  
 normal_headers = {}
 normal_headers['Accept'] = 'application/json'
 normal_headers['Accept-Language'] = 'en-US'
@@ -43,7 +41,6 @@ normal_headers['Accept-Encoding'] = 'gzip, deflate'
 normal_headers['Connection'] = 'Keep-Alive'
 
 
-### Below is the base URL and params used to make a request to the VirusTotal API.  
 ### VirusTotal API is documented here: https://developers.virustotal.com/reference#file-report
 
 
