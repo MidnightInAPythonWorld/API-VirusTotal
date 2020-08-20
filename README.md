@@ -16,7 +16,7 @@ Below are the arguements that need to be passed to the script:
 
 The script has a time delay in between requests so daily limits don't get exceeded should you want to check a large list of hashes.
 
-VirusTotal is rate limiting based on the following numbers:
+VirusTotal is limiting based on the following rates:
 
     Request rate 4 requests/minute
     Daily quota 1000 requests/day
