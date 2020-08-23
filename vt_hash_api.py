@@ -22,12 +22,13 @@ except:
 
 
 ### Below header is used for making the request look like a normal browswer.  
-normal_headers = {}
-normal_headers['Accept'] = 'application/json'
-normal_headers['Accept-Language'] = 'en-US'
-normal_headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
-normal_headers['Accept-Encoding'] = 'gzip, deflate'
-normal_headers['Connection'] = 'Keep-Alive'
+api_headers = {
+        'Accept': 'application/json' ,
+        'Accept-Language' : 'en-US' ,
+        'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36' ,
+        'Accept-Encoding' : 'gzip, deflate' ,
+        'Connection' : 'Keep-Alive' ,
+        }
 
 
 ### Import VirusTotal hashes
@@ -62,7 +63,7 @@ def virus_total_hash(hash, params, output_csv_filename):
         url = 'https://www.virustotal.com/vtapi/v2/file/report'
         params['resource']=hash
         try:
-            response = requests.get(url, headers=normal_headers, params=params, timeout=15.000, verify=True)
+            response = requests.get(url, headers=api_headers, params=params, timeout=15.000, verify=True)
             df = pd.DataFrame(response.json())
             # if file does not exist write header 
             if not os.path.isfile(output_csv_filename):
