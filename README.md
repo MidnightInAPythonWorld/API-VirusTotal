@@ -1,4 +1,4 @@
-# VirusTotal-API
+# API-VirusTotal
 
 This script is used for querying the VirusTotal API for MD5, SHA1, or SHA256 hashes using the Free API Key.  
  
